@@ -4,20 +4,47 @@
 <head>
   <meta charset="utf-8">
   <title>张 Michael's Transformation Matrix</title>
+
+  <!--the following are 'internal' CSS code that ONLY relates to this page. Internal CSS code written in the head of HTML -->
+  <!--  <style>  /*styles each of the tags the same (for all same tags) in the current page (faster and more efficient than "in-line") */
+
+    body {
+      background-color: moccasin;      /* end with semi-colon to close off the property */
+    }
+
+    hr {
+      border-color: brown;
+      border-style: none; /*default border-style is "embedded". */
+      border-top-style: dotted; /*only have top of border have a style*/
+      border-width: 3px; /*thickness of the border*/
+      width: 95% /*width will always be 90% of the window size*/
+    }
+
+    img {
+      height: 200px;
+    }
+
+  </style>                         -->
+
+
+  <!-- use 'external' CSS code to relate to all pages: -->
+  <link rel="stylesheet" href="css/styles.css">   <!--goes where the stylesheet resides-->
+  <link rel="icon" href="favicon.ico">
+
 </head>
 
 <body>
-  <center>
-    <h1>Michael Zhang</h1>
+  <center>  <!-- centers the following layout-->
+    <h1 id="main_heading">Michael Zhang</h1>
     <p><em>Student in <strong>university</strong></em></p>
     <p>I am a second year student in specialization mathematics. My interests are in calculus and linear algebra, as well as instucting students in some subjects.</p>
-    <p>I also enjoy reading classical novels, making clay models, learn new things, and have adequate knowledge in badminton, music, and art.</p>
-    <hr size="1" noshade> <!-- Horizontal line 2 pixels high filled with black -->
+    <p>I also enjoy reading classical novels, making modeling clay figures, learn new things, and have adequate knowledge in badminton, music, and art.</p>
+    <img src="images/baby_michael.jpg" alt="Baby Michael pictrue">  <!--to aaccess images in folder of same directory-->
+    <hr size="2"> <!-- Horizontal line 2 pixels high filled with black -->
   </center>
-  <img src="images/baby_michael.jpg" alt="Baby Michael pictrue">  <!--to aaccess images in folder of same directory-->
-  <h3>Education</h3>
+  <h3 class="important">Education</h3>
   <ul>  <!-- "unordered" list -->
-    <li><a href="https://www.ualberta.ca/index.html">University of Alberta</a></li>
+    <li><a href="https://www.ualberta.ca/index.html">University of Alberta</a></li>   <!--whatever is b/w the <a> tag will be "link"-->
     <ul>
       <li>Specialization in mathematics</li>
     </ul>
@@ -29,7 +56,7 @@
   </ul>
 
   <hr>
-  <h3>Work Experience/Volunteering</h3>
+  <h3 class="important">Work Experience/Volunteering</h3>
   <table cellspacing = "10">  <!--tables, used such that the columns are indented the same-->
 
     <thead>  <!-- table head for each column (somewhat bolded)-->
@@ -41,7 +68,7 @@
 
     <tbody>  <!--the important data for tables-->
       <tr>  <!--table rows-->
-        <td>2018-2020</td>  <!--table cells/row-->
+        <td>2018-2020</td>  <!--table data (cells/row)-->
         <td>Kumon instructor assistant</td>
       </tr>
 
@@ -54,21 +81,7 @@
   </table>
 
   <hr>
-  <h3>Some Interested Books</h3>
-  <ol>  <!-- default of "ordered" list is 1.,2.,3..-->
-    <li type="i">1984</li> <!-- an example of type attribute is "i", which is Roman numerals-->
-    <li type="i">A Tale of Two Cities</li>
-    <li type="i">The Adventures of Tom Sawyer</li>
-    <li type="i">The BFG</li>
-    <li type="i">The Three Musketeers</li>
-    <li type="i">A Christmas Carol</li>
-    <li type="i">Gulliver's Travels</li>
-
-  </ol>
-  <p><a href="book_series.html">Book series I've read</a></p>  <!--to aaccess other html in folder of same directory-->
-
-  <hr>
-  <h3>Skills</h3>
+  <h3 class="important">Skills</h3>
   <table>  <!--THIS IS A NESTED TABLE EXAMPLE -->
     <tr>   <!-- has one row. Big table is 2x1-->
       <td> <!--each cell contains a 2x2 table-->
@@ -99,7 +112,19 @@
     </tr>
   </table>
 
+  <hr>
+  <h3>Some Interested Books</h3>
+  <ol>  <!-- default of "ordered" list is 1.,2.,3..-->
+    <li type="i">1984</li> <!-- an example of type attribute is "i", which is Roman numerals-->
+    <li type="i">A Tale of Two Cities</li>
+    <li type="i">The Adventures of Tom Sawyer</li>
+    <li type="i">The BFG</li>
+    <li type="i">The Three Musketeers</li>
+    <li type="i">A Christmas Carol</li>
+    <li type="i">Gulliver's Travels</li>
 
+  </ol>
+  <p><a href="book_series.html">Book series I've read</a></p>  <!--to aaccess other html in folder of same directory-->
 
   <hr>
   <h3>Contact Details</h3>
@@ -109,5 +134,7 @@
 
 </html>
 
-<!-- This is how to do comments-->
+<!-- This is how to do comments in HTML (Hyper Text Markup Language)-->
 <!-- <em> instead of <i>, <strong> isntead of <b> -->
+<!--     /* This is how to do CSS (Cascading Style Sheets) comments within CSS code*/       -->
+<!-- CSS order of precedence: inline > internal > external -->

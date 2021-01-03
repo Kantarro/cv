@@ -1,0 +1,58 @@
+/*  .css extension will alow browser to recognize the following as a CSS file
+Add this for all HTML files so that the style is consistent */
+
+
+/* CSS syntax:    selector {property: value;}   who {what: how;}*/
+/* tag selectors for the two h3's */
+body {
+  background-color: moccasin;        /* end with semi-colon to close off the property */
+}
+
+hr {
+  border-color: brown;
+  border-style: none; /*default border-style is "embedded". */
+  border-top-style: dotted; /*only have top of border have a style*/
+  border-width: 3px; /*thickness of the border*/
+  width: 95% /*width will always be 90% of the window size*/
+}
+
+h1 {
+  color: #B8860B;
+}
+
+h2 {
+  color: #D2691E;
+}
+
+h3 {
+  color: #D2691E;
+}
+
+img {
+  height: 200px;
+}
+
+/*There exists pseudo classes (i.e for different states). Here when the mouse hovers over the image, the image height becomes 400px*/
+img:hover {
+  height: 600px;
+}
+
+
+/* class and id selectors have higher hierarchy than tag selector*/
+
+/* class selectors [for the two h3's]
+   Write with " .(class name) "        -  use class to apply same style to a group of related items
+   An element can have more than one class*/
+.important {
+  color: red;
+}
+
+/* id selectors [for the main h1]
+   Write with " #(id name)     - use id to apply a specific style to a single element"
+   Must be unique in the whole document!!! (only a single element)
+   An element can only have ONE unique id (and that unique id can only be USED ONCE) */
+  #main_heading {
+    color: coral;
+  }
+
+/* an element can have both [at least] one class and [only one] id*/
